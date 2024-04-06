@@ -1,4 +1,4 @@
-import { INITIAL_STATE_FIELD } from '../contans/constans';
+import { INITIAL_STATE_FIELD } from '../constans/constans';
 export const defaultState = {
 	currentPlayer: 'X',
 	isGameEnded: false,

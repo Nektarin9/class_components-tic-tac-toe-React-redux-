@@ -1,4 +1,4 @@
-import { WIN_PATTERNS } from "../contans/constans";
+import { WIN_PATTERNS } from '../constans/constans';
 
 export function checkTheWinner(field, currentPlayer) {
 	for (let i = 0; i < WIN_PATTERNS.length; i++) {
