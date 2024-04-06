@@ -4,10 +4,8 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 
 class AppContainer extends Component {
-
-
 	render() {
-		const {reset} = this.props
+		const { reset } = this.props;
 		return <GameLayout reset={reset} />;
 	}
 }

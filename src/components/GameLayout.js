@@ -1,23 +1,21 @@
-import styles from './GameLayout.module.css';
 import { Field } from './Field/Field';
 import { Information } from './Information/Information';
 import { Component } from 'react';
 
 export class GameLayout extends Component {
-
 	render() {
 		return (
-			<section className={styles.GameLayoutHeader}>
+			<section className="GameLayoutHeader">
 				<div>
 					<Information />
-					<div className={styles.GameLayoutContainerField}>
+					<div className="GameLayoutContainerField">
 						<Field />
 					</div>
-					<button onClick={this.props.reset} className={styles.GameLayoutBtn}>
+					<button onClick={this.props.reset} className="GameLayoutBtn">
 						Начать заново
 					</button>
 				</div>
 			</section>
-		)
+		);
 	}
 }

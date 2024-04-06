@@ -2,9 +2,7 @@ import { InformationLayout } from './InformationLayout';
 import { Component } from 'react';
 import { connect } from 'react-redux';
 
-
 class InformationContainer extends Component {
-
 	getGameStatus() {
 		const { isDraw, currentPlayer, isGameEnded } = this.props;
 		let status;
@@ -35,4 +33,3 @@ const mapStateToProps = (state) => ({
 });
 
 export const Information = connect(mapStateToProps)(InformationContainer);
-

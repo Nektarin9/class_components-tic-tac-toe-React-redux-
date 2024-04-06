@@ -2,7 +2,6 @@ import { FieldLavout } from './FieldLavout';
 import { checkTheDraw, checkTheWinner } from '../../utils';
 import { Component } from 'react';
 import { connect } from 'react-redux';
-
 import {
 	actionCurrentPlayer,
 	actionIsGameEnded,

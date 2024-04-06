@@ -1,3 +1,5 @@
+export const INITIAL_STATE_FIELD = new Array(9).fill('');
+
 export const WIN_PATTERNS = [
 	[0, 1, 2],
 	[3, 4, 5],

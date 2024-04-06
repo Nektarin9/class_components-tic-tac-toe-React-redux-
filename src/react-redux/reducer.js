@@ -1,8 +1,9 @@
+import { INITIAL_STATE_FIELD } from '../contans/constans';
 export const defaultState = {
 	currentPlayer: 'X',
 	isGameEnded: false,
 	isDraw: false,
-	field: new Array(9).fill(''),
+	field: INITIAL_STATE_FIELD,
 };
 
 export function reducer(state = defaultState, action) {
@@ -17,9 +18,8 @@ export function reducer(state = defaultState, action) {
 		case 'field':
 			return { ...state, field: payload };
 		case 'reset':
-			return defaultState
+			return defaultState;
 		default:
 			return state;
 	}
-
 }

@@ -1,11 +1,104 @@
-body {
-	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		margin: 0;
+		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+			'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	code {
+		font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+	}
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+@layer components {
+	.GameLayoutHeader {
+		background-color: #282c34;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.GameLayoutContainerField {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.GameLayoutBtn {
+		display: block;
+		margin: 15px auto;
+		width: 250px;
+		height: 60px;
+		font-size: 30px;
+		font-weight: 600;
+		border-radius: 10px;
+		cursor: pointer;
+		border: none;
+		color: rgb(255, 255, 255);
+		background-color: rgb(255, 123, 0);
+		transition: 0.3s;
+	}
+
+	.GameLayoutBtn:hover {
+		background-color: rgb(255, 68, 0);
+		transform: 0.3s;
+	}
+
+	.FieldLavoutButton {
+		width: 200px;
+		height: 200px;
+		cursor: pointer;
+		background: none;
+		border: 1px solid white;
+		font-size: 100px;
+	}
+	.red {
+		color: #f30000;
+	}
+	.green {
+		color: #1eff00;
+	}
+	.InformationLayoutContainer {
+		text-align: center;
+		margin: 15px auto;
+		font-size: 45px;
+	}
+
+	.InformationLayouColorRed {
+		color: red;
+	}
+
+	.InformationLayouColorGreen {
+		color: rgb(0, 255, 4);
+	}
+
+	@media (max-width: 600px) {
+		.InformationLayoutContainer {
+			font-size: 35px;
+			margin: 5px auto;
+		}
+		.FieldLavoutButton {
+			text-align: center;
+			padding: 0px;
+			width: 80px;
+			height: 80px;
+			font-size: 45px;
+		}
+		.GameLayoutContainerField {
+			width: 100%;
+			min-height: none;
+		}
+		.GameLayoutHeader {
+			align-items: flex-start;
+		}
+		.GameLayoutBtn {
+			font-size: 25px;
+		}
+	}
 }
